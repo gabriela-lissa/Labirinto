@@ -109,7 +109,7 @@ int backtracking(Labirinto *lab, int lin, int col,
     char celula = lab->mapa[lin][col];
 
     if (celula == '#' || celula == '.')
-        return 0;
+    return 0;
 
     imprimir_labirinto(lab, lin, col, m);
 
@@ -148,7 +148,12 @@ int backtracking(Labirinto *lab, int lin, int col,
 
     lab->mapa[lin][col] = '.';
 
-    int dirs[4][2] = {{1,0},{0,1},{-1,0},{0,-1}};
+    int dirs[4][2] = {
+        {0,1},   // direita
+        {1,0},   // baixo
+        {0,-1},  // esquerda
+        {-1,0}   // cima
+    };
 
     for (int i = 0; i < 4; i++) {
         if (backtracking(
@@ -165,7 +170,7 @@ int backtracking(Labirinto *lab, int lin, int col,
     }
 
     /* BACKTRACK */
-    lab->mapa[lin][col] = lab->original[lin][col];
+    lab->mapa[lin][col] = '.';
 
     if (celula == 'T' && coletado >= 0) {
         NoMochila *ant = NULL, *atual = m->inicio;
