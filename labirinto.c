@@ -142,7 +142,7 @@ int backtracking(Labirinto *lab, int lin, int col,
 
     else if (celula == 'S') {
         empilhar(caminho, lin, col);
-        return 0;
+        printf("\nParabens!\n");
         return 1;
     }
 

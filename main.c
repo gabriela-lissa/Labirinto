@@ -41,9 +41,9 @@ int main() {
     fclose(out);
 
     if (achou)
-        printf("\nSAIDA ENCONTRADA!\n");
+        printf("\nSaida encontrada!\n");
     else
-        printf("\nSEM SAIDA\n");
+        printf("\nSem saida!\n");
 
     liberar_mochila(&mochila);
     liberar_pilha(&caminho);
