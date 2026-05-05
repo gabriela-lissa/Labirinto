@@ -26,6 +26,6 @@
 /* ================= CONSTANTES ================= */
 #define MAX_LINHAS  40
 #define MAX_COLUNAS 40
-#define DELAY_MS    200
+#define DELAY_MS    400
 
 #endif
